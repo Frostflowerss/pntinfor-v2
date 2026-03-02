@@ -269,7 +269,7 @@ export default function About() {
                   tags: s.tags,  
                   percent: levelToPercent(s.tags?.[0]?.name ?? ""),
                 }))}   
-            </>
+            />
           )}
         </Column>
       </Row>
