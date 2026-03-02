@@ -267,8 +267,8 @@ export default function About() {
                   title: s.title,     
                   description: typeof s.description === "string" ? s.description : "",   
                   tags: s.tags,  
+                  percent: levelToPercent(s.tags?.[0]?.name ?? ""),
                 }))}   
-                levelToPercent={levelToPercent} />
             </>
           )}
         </Column>
