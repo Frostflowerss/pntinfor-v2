@@ -13,8 +13,7 @@ export function SkillGrid({
   skills,
   levelToPercent,
 }: {
-  skills: Skill[];
-  levelToPercent: (level: string) => number;
+  skills: (Skill & { percent: number })[];
 }) {
   const rootRef = useRef<HTMLDivElement | null>(null);
   const [active, setActive] = useState(false);
