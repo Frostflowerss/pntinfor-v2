@@ -43,7 +43,7 @@ export function SkillGrid({
         <div key={colIdx} className={styles.skillCol}>
           {col.map((skill, idx) => {
             const level = skill.tags?.[0]?.name ?? "";
-            const percent = levelToPercent(level);
+            const percent = skill.percent;
             // Stagger delay for premium feel.
             const delayMs = (colIdx * splitAt + idx) * 60;
             return (
