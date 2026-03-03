@@ -70,7 +70,9 @@ export default function About() {
     {
       title: about.work.title,
       display: about.work.display,
-      items: about.work.experiences.map((experience) => experience.company),
+      items: about.work.experiences.map(
+        (experience: { company: string }) => experience.company
+      ),
     },
     {
       title: about.studies.title,
