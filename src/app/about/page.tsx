@@ -77,8 +77,9 @@ export default function About() {
     {
       title: about.studies.title,
       display: about.studies.display,
-      items: about.studies.institutions.map((institution) => institution.name),
-    },
+      items: about.studies.institutions
+        .map((institution: { name?: string }) => institution.name)
+        .filter(Boolean),
     {
       title: about.technical.title,
       display: about.technical.display,
